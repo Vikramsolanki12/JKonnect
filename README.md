@@ -1,12 +1,49 @@
-# React + Vite
+# 🌟 JKonnect - Task Manager with Rewards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+JKonnect is a modern and responsive **task management app** built with **React.js**. It helps users track daily tasks, view running and completed tasks, and stay motivated with a **star-based reward system** for every task completed.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ✅ **Track Running & Completed Tasks**
+- ✏️ **Add, Edit & Delete Tasks**
+- ⭐ **Earn Stars** for Each Completed Task
+- 🎨 **Light & Dark Theme** Toggle
+- 📱 **Responsive UI** for All Screen Sizes
+- 💾 **Data Persistence** using Local Storage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖼️ Demo
+
+> _Coming Soon_  
+
+---
+
+## 📸 Screenshots
+
+| Running Tasks | Completed Tasks |
+|---------------|-----------------|
+| ![Running Tasks](./screenshots/running-tasks.png) | ![Completed Tasks](./screenshots/completed-tasks.png) |
+
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React.js
+- **Styling:** CSS Modules
+- **State Management:** React Hooks
+- **Routing:** React Route
+
+---
+
+## 📦 Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/JKonnect.git
+cd JKonnect
+npm install
