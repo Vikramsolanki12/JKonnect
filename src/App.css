@@ -1,0 +1,329 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+body.light-mode {
+  background: linear-gradient(to right, #f8fafc, #e2e8f0);
+  color: #1f2937;
+}
+
+/* === CONTAINER === */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* === CARD === */
+.card {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  transition: background 0.4s ease;
+}
+
+body.light-mode .card {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* === HEADER === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(100, 116, 139, 0.3);
+  padding-bottom: 12px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(to right, #06beb6, #48b1bf);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 0 10px #06beb677;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.stars-small {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* === BUTTONS === */
+.tabs button,
+.theme-toggle,
+.logout-button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.tabs .active-tab {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.tabs button {
+  background: transparent;
+}
+
+body.dark-mode .tabs button {
+  color: #cbd5e1;
+}
+
+body.light-mode .tabs button {
+  color: #1e293b;
+}
+
+.theme-toggle {
+  border: 1px solid #60a5fa;
+  color: #60a5fa;
+  background: transparent;
+}
+
+.theme-toggle:hover {
+  background-color: #60a5fa;
+  color: white;
+}
+
+.login-screen {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #cbd5e1;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.login-input:focus {
+  box-shadow: 0 0 0 2px #60a5fa;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.login-button {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 102, 255, 0.6);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 153, 255, 0.8);
+}
+
+/* === INPUT GROUP === */
+.input-group {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .input-group {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+body.dark-mode .input {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode .input {
+  background: #f1f5f9;
+  color: #1f2937;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+  padding: 10px 16px;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #36d1dc66;
+}
+
+.add-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #36d1dc99;
+}
+
+/* === TASK LIST === */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .task {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.light-mode .task {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  background-color: #e0f2fe;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #ef4444;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-button:hover {
+  color: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  color: #94a3b8;
+}
